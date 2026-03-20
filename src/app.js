@@ -17,7 +17,9 @@ app.use(express.static("public"))  // exposes files from public
 app.use(cookieParser())
 // When you export default router;, whatever name you use when importing is up to you.
 import User from './routes/user.routes.js';
-
+app.get("/", (req, res) => {
+  res.send("Backend is running");
+});
 app.use('/api/v1/user', User);
 
 
