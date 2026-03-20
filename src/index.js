@@ -11,9 +11,9 @@ connectDB()
   app.get('/login' ,(req,res) =>{
     res.send("You are dogg ek the conenciton")
   })
-    app.listen(PORT, ()=>{
-         console.log(`Listening at port http://localhost:${PORT}`)
-    })
+    app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
+})
 })
 .catch((error)=>{
    console.log("Listening failed")
